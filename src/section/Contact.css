@@ -1,0 +1,97 @@
+.contact-section {
+  background: linear-gradient(to right, #04121c, #0b1d2c);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Text Gradient for Heading */
+.text-gradient {
+  background: linear-gradient(90deg, #ff66cc, #cc66ff);
+  -webkit-background-clip: text;
+  background-clip: text;  -webkit-text-fill-color: transparent;
+}
+
+/* Text Block Styling */
+.contact-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  background-color: #0f1a2b;
+  border: 2px solid #a020f0;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
+}
+
+.contact-card i {
+  color: #a020f0;
+  margin-bottom: 8px;
+}
+
+.contact-card h6 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+.contact-card a {
+  color: #ff66cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Animation for section */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for cards */
+.card-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards ease-out;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

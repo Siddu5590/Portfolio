@@ -1,0 +1,75 @@
+.projects-section {
+  background: linear-gradient(to right, #0d0d1a, #1a1a2e);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Heading Gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #ff66cc, #cc66ff);
+  -webkit-background-clip: text;
+  background-clip: text;  -webkit-text-fill-color: transparent;
+}
+
+/* Card Style */
+.project-card {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+}
+
+/* Image Styling */
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tech Title */
+.tech-title {
+  color: #ff66cc;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Tech Badges */
+.tech-badges .badge {
+  font-size: 0.75rem;
+  padding: 6px 8px;
+}
+
+/* Fade-in Section Animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Fade Animation */
+.card-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards ease-out;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,42 @@
+.navbar {
+  z-index: 1000;
+}
+
+/* Nav link base */
+.navbar .nav-link {
+  cursor: pointer;
+  margin-left: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff66cc;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hover text color */
+.navbar .nav-link:hover {
+  color: #ff66cc !important;
+}
+
+/* Active class from react-scroll */
+.navbar .nav-link.active {
+  color: #ff66cc !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link.active::after {
+  width: 100%;
+}
