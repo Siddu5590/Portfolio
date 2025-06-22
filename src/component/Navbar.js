@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
-import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 
 const navItems = [
   { id: 'home', label: 'Home', icon: <FaHome /> },
@@ -12,20 +12,26 @@ const navItems = [
 ];
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div className="container">
         <a className="navbar-brand fw-bold" href="/">Siddaveer Swamy</a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
+
+        <button className="navbar-toggler" type="button" onClick={handleToggle}>
+          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div className={`collapse navbar-collapse justify-content-end ${menuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav">
             {navItems.map((item, index) => (
               <li className="nav-item" key={index}>
@@ -37,6 +43,7 @@ function Navbar() {
                   offset={-70}
                   duration={100}
                   className="nav-link text-uppercase d-flex align-items-center gap-2"
+                  onClick={handleClose}
                 >
                   {item.icon} {item.label}
                 </Link>
