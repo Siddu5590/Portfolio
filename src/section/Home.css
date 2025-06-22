@@ -1,13 +1,20 @@
 .home-section {
+  width: 100%;
   min-height: 100vh;
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .gradient-text {
   background: linear-gradient(to right, #ff66cc, #cc66ff);
   -webkit-background-clip: text;
-  background-clip: text;  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-pink {
@@ -22,18 +29,20 @@
   object-fit: cover;
   box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.3);
   transition: transform 0.4s ease-in-out;
+  margin: 2rem auto 0;
+  display: block;
 }
 
 .home-image:hover {
   transform: scale(1.05);
 }
 
-
 .btn-outline-light:hover {
   background-color: #ff66cc;
   border-color: #ff66cc;
   color: #fff;
 }
+
 .opacity-0 {
   opacity: 0;
   transition: opacity 0.6s ease-out;

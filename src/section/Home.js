@@ -5,19 +5,20 @@ import { useInView } from 'react-intersection-observer';
 
 function Home() {
   const { ref, inView } = useInView({
-    triggerOnce: true, // only animate once
-    threshold: 0.2,     // 20% of section in view to trigger
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
     <section
       id="home"
       ref={ref}
-      className={`home-section py-5 d-flex align-items-center ${
+      className={`home-section ${
         inView ? 'animate__animated animate__fadeInUp' : 'opacity-0'
       }`}
     >
-      <div className="container">
+      <div className="container-fluid px-3 px-md-5 overflow-hidden">
+
         <div className="row align-items-center">
           {/* Left Content */}
           <div className="col-md-6 text-white mt-2">
@@ -34,7 +35,7 @@ function Home() {
               to transform your ideas into reality. Explore my projects and see
               how I can help bring your vision to life.
             </p>
-            <div className="mt-4 d-flex gap-3">
+            <div className="mt-4 d-flex gap-3 flex-wrap">
               <a
                 href="/resume.pdf"
                 download="Siddaveer_Swamy_Resume.pdf"
@@ -54,11 +55,11 @@ function Home() {
           </div>
 
           {/* Right Side Image */}
-          <div className="col-md-6 text-center mt-4 mt-md-0">
+          <div className="col-md-6 text-center">
             <img
               src={profileImage}
               alt="Profile"
-              className="img-fluid rounded-circle home-image mt-5"
+              className="img-fluid rounded-circle home-image"
             />
           </div>
         </div>
@@ -66,4 +67,5 @@ function Home() {
     </section>
   );
 }
-export default Home;  
+
+export default Home;

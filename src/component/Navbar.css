@@ -2,7 +2,6 @@
   z-index: 1000;
 }
 
-/* Nav link base */
 .navbar .nav-link {
   cursor: pointer;
   margin-left: 1rem;
@@ -10,7 +9,6 @@
   transition: color 0.3s ease;
 }
 
-/* Hover underline effect */
 .navbar .nav-link::after {
   content: '';
   position: absolute;
@@ -26,12 +24,10 @@
   width: 100%;
 }
 
-/* Hover text color */
 .navbar .nav-link:hover {
   color: #ff66cc !important;
 }
 
-/* Active class from react-scroll */
 .navbar .nav-link.active {
   color: #ff66cc !important;
   font-weight: 600;
@@ -39,4 +35,34 @@
 
 .navbar .nav-link.active::after {
   width: 100%;
+}
+
+.navbar-collapse {
+  transition: max-height 0.4s ease;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background-color: #212529;
+    z-index: 999;
+    padding: 1rem 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .navbar-collapse ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-collapse li {
+    margin: 0.5rem 0;
+  }
 }

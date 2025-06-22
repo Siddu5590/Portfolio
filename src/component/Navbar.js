@@ -31,7 +31,7 @@ function Navbar() {
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 
-        <div className={`collapse navbar-collapse justify-content-end ${menuOpen ? 'show' : ''}`} id="navbarNav">
+        <div className={`navbar-collapse ${menuOpen ? 'show' : 'collapse'} justify-content-end`} id="navbarNav">
           <ul className="navbar-nav">
             {navItems.map((item, index) => (
               <li className="nav-item" key={index}>

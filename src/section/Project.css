@@ -4,14 +4,13 @@
   overflow-x: hidden;
 }
 
-/* Heading Gradient */
 .text-gradient {
   background: linear-gradient(90deg, #ff66cc, #cc66ff);
   -webkit-background-clip: text;
-  background-clip: text;  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Card Style */
 .project-card {
   background-color: #1e1e2f;
   border-radius: 12px;
@@ -25,26 +24,22 @@
   box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
 }
 
-/* Image Styling */
 .project-card img {
   height: 200px;
   object-fit: cover;
 }
 
-/* Tech Title */
 .tech-title {
   color: #ff66cc;
   font-weight: bold;
   margin-top: 10px;
 }
 
-/* Tech Badges */
 .tech-badges .badge {
   font-size: 0.75rem;
   padding: 6px 8px;
 }
 
-/* Fade-in Section Animation */
 .hidden {
   opacity: 0;
   transform: translateY(50px);
@@ -56,7 +51,6 @@
   transform: translateY(0);
 }
 
-/* Card Fade Animation */
 .card-fade {
   opacity: 0;
   transform: translateY(30px);

@@ -1,9 +1,10 @@
-/* Section Background */
 .about-section {
   background-color: #020b10;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 4rem 1rem;
 }
 
-/* Top Text Styling */
 .about-subtitle {
   letter-spacing: 1.5px;
   color: white;
@@ -13,9 +14,9 @@
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-/* Gradient Text */
 .gradient-text {
   background: linear-gradient(90deg, white, #aaa);
   -webkit-background-clip: text;
@@ -23,23 +24,22 @@
   background-clip: text;
 }
 
-/* About Image Styling */
 .about-image {
-  width: 50%;   
-  height: 100%;
+  width: 220px;
+  height: 280px;
   object-fit: cover;
   border: 3px solid #d100f1;
   border-radius: 20px;
   transform: rotate(-3deg);
   transition: transform 0.4s ease;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
+  display: block;
 }
 
 .about-image:hover {
   transform: scale(1.05) rotate(0deg);
 }
 
-/* Slide Animations */
 .hidden-left {
   opacity: 0;
   transform: translateX(-100px);
@@ -62,24 +62,42 @@
   transform: translateX(0);
 }
 
-/* Paragraph Animation (Staggered Fade-In) */
 .paragraph {
   font-size: 1.15rem;
   line-height: 1.8;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  color: #f1f1f1;
+  text-align: justify;
 }
 
-/* When visible */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Delay classes for staggered effect */
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 .delay-4 { transition-delay: 0.8s; }
 .delay-5 { transition-delay: 1s; }
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    width: 180px;
+    height: 230px;
+  }
+
+  .about-section {
+    padding: 3rem 1rem;
+  }
+}
