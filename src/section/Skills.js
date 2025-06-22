@@ -52,7 +52,7 @@ const skillIconStyle = {
 
 const Skills = () => {
   return (
-    <section className="skills-section py-5" style={{ backgroundColor: '#020b10' }}>
+    <section id="skills" className="skills-section py-5" style={{ backgroundColor: '#020b10' }}>
       <div className="container text-center mb-5">
         <p style={{ letterSpacing: '1.5px', color: 'white', marginBottom: '5px' }}>EXPLORE MY</p>
         <h2 style={{ fontSize: '2.2rem', fontWeight: 'bold' }}>

@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import './Navbar.css';
-import { FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
+import {
+  FaHome,
+  FaUser,
+  FaCode,
+  FaProjectDiagram,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from 'react-icons/fa';
 
 const navItems = [
   { id: 'home', label: 'Home', icon: <FaHome /> },
@@ -13,26 +21,25 @@ const navItems = [
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const handleClose = () => {
-    setMenuOpen(false);
-  };
+  const handleToggle = () => setMenuOpen(!menuOpen);
+  const handleClose = () => setMenuOpen(false);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
       <div className="container">
-        <a className="navbar-brand fw-bold" href="/">Siddaveer Swamy</a>
+        <a className="navbar-brand fw-bold" href="/">
+          Siddaveer Swamy
+        </a>
 
         <button className="navbar-toggler" type="button" onClick={handleToggle}>
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 
-        <div className={`navbar-collapse ${menuOpen ? 'show' : 'collapse'} justify-content-end`} id="navbarNav">
-          <ul className="navbar-nav">
+        <div
+          className={`collapse navbar-collapse justify-content-end ${menuOpen ? 'show' : ''}`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav text-center">
             {navItems.map((item, index) => (
               <li className="nav-item" key={index}>
                 <Link
@@ -40,7 +47,7 @@ function Navbar() {
                   to={item.id}
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={-80}
                   duration={100}
                   className="nav-link text-uppercase d-flex align-items-center gap-2"
                   onClick={handleClose}

@@ -60,7 +60,7 @@ function Projects() {
                     ))}
                   </div>
                   <div className="mt-auto d-flex flex-wrap gap-2">
-                    <a href={project.demo} className="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <a href={project.demo} className="btn btn-primary btn-sm"  rel="noopener noreferrer">
                       Demo
                     </a>
                     <a href={project.code} className="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">
