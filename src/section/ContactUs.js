@@ -8,6 +8,10 @@ function Contact() {
     threshold: 0.2,
   });
 
+  const handleCardClick = (link) => {
+    window.open(link, '_blank', 'noopener noreferrer');
+  };
+
   const contacts = [
     {
       icon: 'fas fa-envelope',
@@ -41,12 +45,12 @@ function Contact() {
       ref={ref}
       className={`contact-section ${inView ? 'fade-in-up' : 'hidden'}`}
     >
-      <div className="container py-5">
-        <div className="row">
+      <div className="container py-4">
+        <div className="row align-items-center">
           {/* Left Text Block */}
-          <div className="col-md-6 contact-text">
-            <h2 className="fw-bold text-gradient mb-4">CONTACT ME</h2>
-            <p>
+          <div className="col-md-6 mb-4 mb-md-0">
+            <h2 className="fw-bold text-gradient mb-3">CONTACT ME</h2>
+            <p className="contact-description fs-4">
               Feel free to reach out to me for any inquiries, collaboration opportunities, or if you just want to say hello.
               I am always open to discussing new projects, creative ideas, or potential collaborations. Let's connect and
               build something amazing together!
@@ -55,16 +59,17 @@ function Contact() {
 
           {/* Right Contact Cards */}
           <div className="col-md-6">
-            <div className="row g-4">
+            <div className="row g-3">
               {contacts.map((item, index) => (
                 <div className="col-sm-6" key={index}>
-                  <div className={`contact-card card-fade delay-${index + 1}`}>
+                  <div
+                    className={`contact-card card-fade delay-${index + 1}`}
+                    onClick={() => handleCardClick(item.link)}
+                  >
                     <i className={`${item.icon} fa-2x mb-2`}></i>
                     <h6>{item.title}</h6>
                     <p>{item.value}</p>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      Send a message
-                    </a>
+                    <span className="card-link">Send a message</span>
                   </div>
                 </div>
               ))}

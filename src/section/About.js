@@ -13,7 +13,7 @@ function About() {
     <section
       ref={ref}
       id="about"
-      className="py-5 text-white about-section"
+      className={`about-section ${inView ? 'animate' : ''}`}
     >
       <div className="container text-center mb-5">
         <p className="about-subtitle">GET TO KNOW MORE</p>
@@ -25,38 +25,29 @@ function About() {
       <div className="container">
         <div className="row align-items-center">
           {/* Left Image */}
-          <div
-            className={`col-md-6 mb-4 mb-md-0 text-center ${
-              inView ? 'slide-left' : 'hidden-left'
-            }`}
-          >
+          <div className="col-md-5 text-center mb-4 mb-md-0">
             <img
-            src={aboutImage}
-             alt="siddu"
-           className="about-image img-fluid shadow-lg"
+              src={aboutImage}
+              alt="siddu"
+              className={`about-image ${inView ? 'slide-left' : 'hidden-left'}`}
             />
-
           </div>
 
           {/* Right Content */}
-          <div
-            className={`col-md-6 text-md-start text-center ${
-              inView ? 'slide-right' : 'hidden-right'
-            }`}
-          >
-            <p className={`fs-5 paragraph ${inView ? 'fade-in delay-1' : ''}`}>
-              Hello!, I am <strong>SIDDAVEER SWAMY</strong>
+          <div className={`col-md-7 ${inView ? 'slide-right' : 'hidden-right'}`}>
+            <p className="paragraph delay-1">
+              <strong>Hello!, I am SHIVUROOPESH</strong>
             </p>
-            <p className={`fs-5 paragraph ${inView ? 'fade-in delay-2' : ''}`}>
+            <p className="paragraph delay-2">
               A self-taught programmer with a passion for learning and exploring new technologies.
             </p>
-            <p className={`fs-5 paragraph ${inView ? 'fade-in delay-3' : ''}`}>
+            <p className="paragraph delay-3">
               My expertise spans from front-end development to back-end programming.
             </p>
-            <p className={`fs-5 paragraph ${inView ? 'fade-in delay-4' : ''}`}>
+            <p className="paragraph delay-4">
               I am currently expanding my skillset to include <strong>Java Full Stack</strong>.
             </p>
-            <p className={`fs-5 paragraph ${inView ? 'fade-in delay-5' : ''}`}>
+            <p className="paragraph delay-5">
               As a dedicated and driven individual, I constantly seek out opportunities to grow and improve as a programmer.
             </p>
           </div>

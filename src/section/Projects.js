@@ -40,30 +40,47 @@ function Projects() {
   ];
 
   return (
-    <section id="projects" className={`projects-section py-5 text-white ${inView ? 'fade-in-up' : 'hidden'}`} ref={ref}>
+    <section
+      id="projects"
+      className={`projects-section text-white ${inView ? 'fade-in-up' : 'hidden'}`}
+      ref={ref}
+    >
       <div className="container">
         <h2 className="text-center mb-5 fw-bold text-gradient">PROJECTS</h2>
         <div className="row g-4">
           {projectList.map((project, index) => (
-            <div className="col-md-4" key={index}>
+            <div className="col-md-4 col-sm-6 col-12" key={index}>
               <div className={`card project-card h-100 card-fade delay-${index + 1}`}>
-                <img src={project.image} className="card-img-top" alt={project.title} />
+                <img
+                  src={project.image}
+                  className="card-img-top"
+                  alt={project.title}
+                />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">{project.title}</h5>
                   <p className="card-text">{project.description}</p>
                   <h6 className="tech-title">Technologies</h6>
                   <div className="mb-3 tech-badges">
                     {project.tech.map((tech, i) => (
-                      <span key={i} className="badge bg-secondary me-1 mb-1">
+                      <span key={i} className="badge me-1 mb-1">
                         {tech}
                       </span>
                     ))}
                   </div>
                   <div className="mt-auto d-flex flex-wrap gap-2">
-                    <a href={project.demo} className="btn btn-primary btn-sm"  rel="noopener noreferrer">
+                    {/* <a
+                      href={project.demo}
+                      className="btn btn-primary btn-sm"
+                      rel="noopener noreferrer"
+                    >
                       Demo
-                    </a>
-                    <a href={project.code} className="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">
+                    </a> */}
+                    <a
+                      href={project.code}
+                      className="btn btn-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View Code
                     </a>
                   </div>

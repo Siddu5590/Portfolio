@@ -1,8 +1,8 @@
 .contact-section {
   background: linear-gradient(to right, #04121c, #0b1d2c);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  min-height: auto;
+  padding-top: 60px;
+  padding-bottom: 40px;
   color: #fff;
   overflow-x: hidden;
 }
@@ -14,7 +14,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.contact-text p {
+.contact-description {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #f1f1f1;
@@ -27,13 +27,16 @@
   padding: 20px;
   text-align: center;
   height: 100%;
-  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.2);
-  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.15);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.contact-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 20px rgba(160, 32, 240, 0.4);
+.contact-card:hover,
+.contact-card:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(160, 32, 240, 0.5);
+  background-color: #1a2540;
 }
 
 .contact-card i {
@@ -50,17 +53,18 @@
 .contact-card p {
   font-size: 0.95rem;
   color: #dcdcdc;
+  margin-bottom: 8px;
 }
 
-.contact-card a {
+.card-link {
   color: #ff66cc;
-  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
+  text-decoration: underline;
 }
 
-.contact-card a:hover {
-  text-decoration: underline;
+.card-link:hover {
+  color: #ff85d4;
 }
 
 .hidden {
@@ -89,9 +93,13 @@
   to {
     opacity: 1;
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
+  }
 }
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .contact-section {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
 }
