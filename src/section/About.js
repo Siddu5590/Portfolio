@@ -24,7 +24,7 @@ function About() {
 
       <div className="container">
         <div className="row align-items-center">
-          {/* Left Image */}
+         
           <div className="col-md-5 text-center mb-4 mb-md-0">
             <img
               src={aboutImage}
@@ -33,7 +33,7 @@ function About() {
             />
           </div>
 
-          {/* Right Content */}
+        
           <div className={`col-md-7 ${inView ? 'slide-right' : 'hidden-right'}`}>
             <p className="paragraph delay-1">
               <strong>Hello!, I am SIDDAVEER SWAMY</strong>

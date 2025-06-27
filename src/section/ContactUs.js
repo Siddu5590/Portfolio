@@ -47,7 +47,7 @@ function Contact() {
     >
       <div className="container py-4">
         <div className="row align-items-center">
-          {/* Left Text Block */}
+          
           <div className="col-md-6 mb-4 mb-md-0">
             <h2 className="fw-bold text-gradient mb-3">CONTACT ME</h2>
             <p className="contact-description fs-4">
@@ -57,7 +57,7 @@ function Contact() {
             </p>
           </div>
 
-          {/* Right Contact Cards */}
+          
           <div className="col-md-6">
             <div className="row g-3">
               {contacts.map((item, index) => (

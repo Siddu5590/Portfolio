@@ -14,7 +14,7 @@ function Home() {
     >
       <div className="container-fluid px-4 px-md-5">
         <div className="row align-items-center justify-content-between">
-          {/* Left Text Block */}
+         
           <div className="col-lg-6 mt-4 text-white">
             <h5>
               Hello there, I'm <span className="text-pink fw-bold">SIDDAVEER SWAMY</span>
@@ -41,13 +41,14 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-light px-4 py-2 fw-bold"
+                
               >
                 View Resume
               </a>
             </div>
           </div>
 
-          {/* Right Profile Image */}
+          
           <div className="col-lg-5 text-center mt-4 mt-lg-0">
             <img
               src={profileImage}
