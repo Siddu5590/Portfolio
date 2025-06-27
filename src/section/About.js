@@ -36,7 +36,7 @@ function About() {
           {/* Right Content */}
           <div className={`col-md-7 ${inView ? 'slide-right' : 'hidden-right'}`}>
             <p className="paragraph delay-1">
-              <strong>Hello!, I am SHIVUROOPESH</strong>
+              <strong>Hello!, I am SIDDAVEER SWAMY</strong>
             </p>
             <p className="paragraph delay-2">
               A self-taught programmer with a passion for learning and exploring new technologies.

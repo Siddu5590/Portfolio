@@ -17,7 +17,7 @@ function Home() {
           {/* Left Text Block */}
           <div className="col-lg-6 mt-4 text-white">
             <h5>
-              Hello there, I'm <span className="text-pink fw-bold">SHIVUROOPESH</span>
+              Hello there, I'm <span className="text-pink fw-bold">SIDDAVEER SWAMY</span>
             </h5>
             <h1 className="display-4 fw-bold gradient-text">FULL STACK</h1>
             <h1 className="display-4 fw-bold gradient-text">WEB DEVELOPER</h1>
